@@ -1,8 +1,8 @@
 ---
 title: `retinar` detecta que `hsi` cambió lo que publica
-status: open
+status: done
 created_at: 2026-08-29T00:00:00Z
-updated_at: 2026-08-29T00:00:00Z
+updated_at: 2026-09-02T11:50:00Z
 parent: 1
 ---
 
