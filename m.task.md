@@ -2,7 +2,7 @@
 title: Vincular `USER_PERMISSIONS` de `retinar` con `hsi`
 status: done
 created_at: 2026-08-29T00:00:00Z
-updated_at: 2026-09-02T11:50:00Z
+updated_at: 2026-09-02T12:10:00Z
 parent: l
 ---
 
@@ -69,3 +69,13 @@ Todo revertido después: `hsi` volvió a `98 × (OK, OPEN)` y `retinar` a `all c
 Lo que lo volvió visible en dos líneas fue `chain list "/public-api/user/"` con los alias de [`3d`](3d.task.md) — antes eran 98 hexadecimales.
 
 **Arreglarlo es de `retinar` y no de acá.** Lo que este ítem tenía que probar es que la herramienta lo muestra, y lo muestra.
+
+### Y no era el único endpoint que `retinar` consume
+
+> **Anotado el 2026-09-02**, después de cerrar.
+
+Este ítem vinculó **uno**, porque estaba escrito sobre `USER_PERMISSIONS`. Contando literales `"/public-api…"` contra los 98 publicados, `retinar` consume **seis**, y hay un segundo consumidor —`filasvirtuales`— con **cinco**.
+
+Que haya cerrado con uno está bien: lo que tenía que probar es el mecanismo, igual que [`k`](k.task.md) del lado del proveedor. El barrido es [`3n`](3n.task.md).
+
+**Y el mismatch quedó confirmado desde afuera**: `filasvirtuales` llama a `/user/permissions/from-token` —el endpoint que devuelve roles— desde un método que también se llama *permissions*. Un consumidor hermano lo hace bien, así que lo de `retinar` es un bug y no una convención.
