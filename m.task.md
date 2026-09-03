@@ -2,8 +2,9 @@
 title: Vincular `USER_PERMISSIONS` de `retinar` con `hsi`
 status: done
 created_at: 2026-08-29T00:00:00Z
-updated_at: 2026-09-02T12:10:00Z
+updated_at: 2026-09-04T03:20:00Z
 parent: l
+relation.depends: [j]
 ---
 
 # Vincular `USER_PERMISSIONS` de `retinar` con `hsi`

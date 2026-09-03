@@ -2,8 +2,9 @@
 title: Acompañar la adopción en `hsi`
 status: done
 created_at: 2026-08-29T00:00:00Z
-updated_at: 2026-09-02T05:30:00Z
+updated_at: 2026-09-04T03:20:00Z
 parent: j
+relation.depends: [2j]
 ---
 
 # Acompañar la adopción en `hsi`

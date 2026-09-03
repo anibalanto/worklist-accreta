@@ -2,8 +2,9 @@
 title: Los bilinks salen de las ramas del proyecto
 status: done
 created_at: 2026-08-29T00:00:00Z
-updated_at: 2026-08-30T22:35:03Z
+updated_at: 2026-09-04T03:30:00Z
 parent: 1
+relation.depends: [9]
 ---
 
 # Los bilinks salen de las ramas del proyecto
