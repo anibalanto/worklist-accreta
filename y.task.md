@@ -29,13 +29,13 @@ $ bilinker capture crates/bilinker/src/lib.rs
 Error: uso: bilinker capture <file> <start> <end>
 ```
 
-El formato lo contempla —`query` ausente = el archivo completo, [`concepts/capture.md`](../../subsystems/bilinker/concepts/capture.md) § "Formato"— y `capture.rs::capture_file_whole` está implementado, pero solo lo llama `chain new` cuando el tip viene sin posición. Por el hueco anterior, ese camino tampoco está disponible acá.
+El formato lo contempla —`query` ausente = el archivo completo, [`concepts/capture.md`](https://github.com/anibalanto/accreta/blob/873a909476783b731494023b9d4a2aa6f4d5976e/subsystems/bilinker/concepts/capture.md) § "Formato"— y `capture.rs::capture_file_whole` está implementado, pero solo lo llama `chain new` cuando el tip viene sin posición. Por el hueco anterior, ese camino tampoco está disponible acá.
 
 Los captures de archivo completo que hay en disco son la forma más usada del lado de las specs: `bilink.md`, `reference.md`, `chain.md`, `status.md`, `watch.md` y varios más.
 
 ## El costo
 
-La task `o` creó 48 cadenas con un script que llama a `capture` dos veces y escribe los dos `.bilink` con `printf`. Escribir a mano el campo que define a qué apunta un vínculo es justo lo que [`commands/recapture.md`](../../subsystems/bilinker/commands/recapture.md) § "Propósito" da como razón de existir de `recapture`.
+La task `o` creó 48 cadenas con un script que llama a `capture` dos veces y escribe los dos `.bilink` con `printf`. Escribir a mano el campo que define a qué apunta un vínculo es justo lo que [`commands/recapture.md`](https://github.com/anibalanto/accreta/blob/873a909476783b731494023b9d4a2aa6f4d5976e/subsystems/bilinker/commands/recapture.md) § "Propósito" da como razón de existir de `recapture`.
 
 ## Cuándo está hecha
 

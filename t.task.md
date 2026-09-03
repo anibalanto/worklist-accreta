@@ -10,7 +10,7 @@ parent: r
 
 `sha256(esquema generado) == <hash registrado para la versión N>`. Cambiar los tipos sin subir la versión falla.
 
-Es lo que convierte `.bilink/version` de una promesa en una propiedad del artefacto. El caso que motiva: [ADR-0005](../../subsystems/bilinker/.stratum/impl/docs/adr/0005-frontera-entre-proyectos.md) agrega endpoints **sin migración** porque son aditivos, y un parser viejo leería `abstract` como un path de capa sin fallar — exactamente el cambio que uno se olvida de bumpear.
+Es lo que convierte `.bilink/version` de una promesa en una propiedad del artefacto. El caso que motiva: [ADR-0005](https://github.com/anibalanto/bilinker/blob/44831f2f7c47c052cb9e1582cda4b966bf46fd28/docs/adr/0005-frontera-entre-proyectos.md) agrega endpoints **sin migración** porque son aditivos, y un parser viejo leería `abstract` como un path de capa sin fallar — exactamente el cambio que uno se olvida de bumpear.
 
 ## Cómo quedó
 
@@ -22,7 +22,7 @@ Se probó cambiando el formato sin tocar la versión, y falla con el mensaje que
 
 Con el esquema del endpoint escrito como `{"type": "string"}` a secas, **agregar un tipo de endpoint no movía el hash**. Se verificó agregando `repo <alias>`: el test pasaba.
 
-O sea que el guard fallaba justo en el caso que [ADR-0006](../../subsystems/bilinker/.stratum/impl/docs/adr/0006-formato-como-crate-versionado.md) pone como su motivo. La causa: un esquema que describe de menos no puede servir de guarda, y `"es un string"` borra las variantes.
+O sea que el guard fallaba justo en el caso que [ADR-0006](https://github.com/anibalanto/bilinker/blob/44831f2f7c47c052cb9e1582cda4b966bf46fd28/docs/adr/0006-formato-como-crate-versionado.md) pone como su motivo. La causa: un esquema que describe de menos no puede servir de guarda, y `"es un string"` borra las variantes.
 
 Se arregló haciendo que **el parser y el esquema salgan de la misma tabla**. `ENDPOINT_PREFIXES` lleva los prefijos reconocidos y su constructor; `from_str` la recorre y `JsonSchema` la publica. Agregar un tipo obliga a tocarla, eso cambia el esquema, y el guard lo detecta — verificado, ahora falla.
 

@@ -37,7 +37,7 @@ offset: 3226~5109             →  "3226~5109"
 state: CHAIN_DIRTY            →  "CHAIN_DIRTY"
 ```
 
-Coincide con la forma que [ADR-0003](../../subsystems/bilinker/.stratum/impl/docs/adr/0003-formato-captures-y-aceptacion.md) fija para el YAML, así que cuando la serialización pase a serde el esquema ya describe el archivo literal sin reescribirse.
+Coincide con la forma que [ADR-0003](https://github.com/anibalanto/bilinker/blob/44831f2f7c47c052cb9e1582cda4b966bf46fd28/docs/adr/0003-formato-captures-y-aceptacion.md) fija para el YAML, así que cuando la serialización pase a serde el esquema ya describe el archivo literal sin reescribirse.
 
 ## Lo que no entró
 

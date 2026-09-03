@@ -36,7 +36,7 @@ Agrandar una sección de spec es el gesto más frecuente del sprint 3, y es just
 
 Siguiendo del ejemplo anterior: al deshacer la línea agregada, el fragmento vuelve a ser byte por byte el aceptado —`bilinker get 01e13be3.0 --diff` dice `[sin cambios]`— y `check` **deja `state.0: EXPANDED`**.
 
-La causa es la optimización de [`commands/check.md`](../../subsystems/bilinker/commands/check.md) § "Optimización por diff de git": `check.rs::git_file_changed` pregunta si el archivo cambió desde `commit.N`, y como la edición y su reversión se cancelan, la respuesta es "no" y se conserva el `state.N` cacheado. Pero ese estado se calculó contra el árbol de trabajo, no contra el commit, así que la premisa de la optimización —"si el archivo no cambió desde `commit.N`, el estado cacheado sigue valiendo"— no se sostiene.
+La causa es la optimización de [`commands/check.md`](https://github.com/anibalanto/accreta/blob/127b4ae1d8f3877f738a7f6c11de641cd2eae70a/subsystems/bilinker/commands/check.md) § "Optimización por diff de git": `check.rs::git_file_changed` pregunta si el archivo cambió desde `commit.N`, y como la edición y su reversión se cancelan, la respuesta es "no" y se conserva el `state.N` cacheado. Pero ese estado se calculó contra el árbol de trabajo, no contra el commit, así que la premisa de la optimización —"si el archivo no cambió desde `commit.N`, el estado cacheado sigue valiendo"— no se sostiene.
 
 Queda pegado hasta que algo más fuerce la re-evaluación. `bilinker accept <uuid>.N` lo limpia, que es exactamente lo que no habría que hacer para arreglar un estado falso.
 
@@ -52,7 +52,7 @@ El primer defecto era más ancho de lo reportado: `CheckResult::is_clean()` **en
 Partido en dos predicados, que es la distinción que faltaba:
 
 - `CheckResult::all_ok()` — los dos endpoints en OK. Decide qué se imprime.
-- `CheckResult::is_clean()` — el criterio de [`commands/check.md`](../../subsystems/bilinker/commands/check.md) § "Código de salida", donde los estados con auto-fix no hacen fallar a `check`.
+- `CheckResult::is_clean()` — el criterio de [`commands/check.md`](https://github.com/anibalanto/accreta/blob/127b4ae1d8f3877f738a7f6c11de641cd2eae70a/subsystems/bilinker/commands/check.md) § "Código de salida", donde los estados con auto-fix no hacen fallar a `check`.
 
 El segundo defecto: el fast-path de `check_structural` ahora solo conserva un `state.N` de OK. Cualquier estado no-OK cacheado se recalcula, porque se escribió leyendo el árbol de trabajo y no el commit.
 

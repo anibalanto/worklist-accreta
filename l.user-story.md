@@ -16,7 +16,7 @@ Es el criterio de terminado de la épica.
 
 ## Por qué es así
 
-[ADR-0005](../../subsystems/bilinker/.stratum/impl/docs/adr/0005-frontera-entre-proyectos.md) Decisión 2 — El endpoint repo.
+[ADR-0005](https://github.com/anibalanto/bilinker/blob/65bc08353adc2a83f4337aba8493de3753911e6e/docs/adr/0005-frontera-entre-proyectos.md) Decisión 2 — El endpoint repo.
 
 ## Cuándo está hecha
 

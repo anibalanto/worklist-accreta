@@ -8,13 +8,13 @@ parent: 1
 
 # El trabajo diario sobre la ref no requiere pensar en ella
 
-**Lado:** desarrollo · **Decisión:** [ADR-0004](../../subsystems/bilinker/.stratum/impl/docs/adr/0004-bilinks-en-ref-paralela.md)
+**Lado:** desarrollo · **Decisión:** [ADR-0004](https://github.com/anibalanto/bilinker/blob/6402b77c61c49a9d117ac1cf657cf315f893a939/docs/adr/0004-bilinks-en-ref-paralela.md)
 
 Como quien trabaja todos los días en el repo, quiero cambiar de rama, rebasear y aceptar sin acordarme de que los bilinks viven aparte, para que la ref no sea un impuesto cognitivo.
 
 ## Por qué es así
 
-No se repite acá. Vive en [0004-bilinks-en-ref-paralela.md](../../subsystems/bilinker/.stratum/impl/docs/adr/0004-bilinks-en-ref-paralela.md):
+No se repite acá. Vive en [0004-bilinks-en-ref-paralela.md](https://github.com/anibalanto/bilinker/blob/6402b77c61c49a9d117ac1cf657cf315f893a939/docs/adr/0004-bilinks-en-ref-paralela.md):
 
 - Decisión 1 § `bilinker init`
 - Decisión 1 § Cambiar de rama

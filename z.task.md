@@ -16,14 +16,14 @@ La palabra significa dos cosas en dos niveles del ecosistema:
 
 | Nivel | "task" es |
 |---|---|
-| Accreta ([`concepts/workitem.md`](../../concepts/workitem.md)) | cualquier unidad de trabajo — épica, story o task son WorkItems de tipo `Task` |
-| worklist ([`item.md`](../../subsystems/worklist/concepts/item.md)) | el tipo hoja, el que no tiene hijos |
+| Accreta ([`concepts/workitem.md`](https://github.com/anibalanto/accreta/blob/30d34a393737a484a5bb4ff1a8eedad83274a011/concepts/workitem.md)) | cualquier unidad de trabajo — épica, story o task son WorkItems de tipo `Task` |
+| worklist ([`item.md`](https://github.com/anibalanto/accreta/blob/30d34a393737a484a5bb4ff1a8eedad83274a011/subsystems/worklist/concepts/item.md)) | el tipo hoja, el que no tiene hijos |
 
 El endpoint usaba el primer sentido y quien lo lee está parado en el segundo. Que `item.md` hubiera escrito `todo <id>` en algún momento muestra que el roce ya se había sentido.
 
 ## Por qué `issue` y no las otras
 
-[ADR-0005](../../subsystems/bilinker/.stratum/impl/docs/adr/0005-frontera-entre-proyectos.md) fijó la regla al nombrar el endpoint repo: **el nombre sale de qué es la cosa, no de cómo se la trae.** De ahí sale la convención que tienen los cuatro prefijos —`capture` nombra un capture y no a bilinker, `repo` nombra un repo y no a git— y de ahí salen los descartes:
+[ADR-0005](https://github.com/anibalanto/bilinker/blob/ee4e25cc75fbb730a20794afe425061298d137f4/docs/adr/0005-frontera-entre-proyectos.md) fijó la regla al nombrar el endpoint repo: **el nombre sale de qué es la cosa, no de cómo se la trae.** De ahí sale la convención que tienen los cuatro prefijos —`capture` nombra un capture y no a bilinker, `repo` nombra un repo y no a git— y de ahí salen los descartes:
 
 | | Por qué no |
 |---|---|
@@ -44,7 +44,7 @@ El endpoint usaba el primer sentido y quien lo lee está parado en el segundo. Q
 
 ## Sin migración, y por poco
 
-No hay ni un solo endpoint de este tipo en las seis capas, así que `task <id>` nunca llegó a escribirse en disco y el renombre no deja nada que convertir. Después de [ADR-0006](../../subsystems/bilinker/.stratum/impl/docs/adr/0006-formato-como-crate-versionado.md) el mismo cambio sería bump de versión de formato más migración: se hizo ahora porque era gratis ahora.
+No hay ni un solo endpoint de este tipo en las seis capas, así que `task <id>` nunca llegó a escribirse en disco y el renombre no deja nada que convertir. Después de [ADR-0006](https://github.com/anibalanto/bilinker/blob/ee4e25cc75fbb730a20794afe425061298d137f4/docs/adr/0006-formato-como-crate-versionado.md) el mismo cambio sería bump de versión de formato más migración: se hizo ahora porque era gratis ahora.
 
 El parser tampoco acepta el prefijo viejo. Un `task 3a` cae a path Stratum como cualquier valor sin prefijo conocido, y hay un test que lo fija.
 

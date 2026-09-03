@@ -8,7 +8,7 @@ parent: 5
 
 # El saldo de cobertura que la task `o` no cerró
 
-La task `o` cruzó bilinker y la parte de lattice que [ADR-0003](../../subsystems/bilinker/.stratum/impl/docs/adr/0003-formato-captures-y-aceptacion.md) toca. Queda esto, que está fuera de lo que los ADRs mueven y por eso no bloqueaba el sprint 1.
+La task `o` cruzó bilinker y la parte de lattice que [ADR-0003](https://github.com/anibalanto/bilinker/blob/2dda3e00063010595726bc4d3f835b15db779434/docs/adr/0003-formato-captures-y-aceptacion.md) toca. Queda esto, que está fuera de lo que los ADRs mueven y por eso no bloqueaba el sprint 1.
 
 ## El core de lattice está mudo
 
@@ -26,7 +26,7 @@ No es un hueco de cobertura sino el hueco de al lado: **implementación sin espe
 
 ## `integration/worklist.md` describe un archivo que no existe
 
-[`bilinker/integration/worklist.md`](../../subsystems/bilinker/integration/worklist.md) § "Trabajo pendiente sobre un endpoint" muestra un `accreta/.stratum/worklist/<uuid>.tasks`. [`worklist/concepts/bilink-tasks.md`](../../subsystems/worklist/concepts/bilink-tasks.md) inv. 3 dice explícitamente que ese archivo no existe. Gana `bilink-tasks.md`.
+[`bilinker/integration/worklist.md`](https://github.com/anibalanto/accreta/blob/1f06fd96b6052d00ac6319179845a810d0f05296/subsystems/bilinker/integration/worklist.md) § "Trabajo pendiente sobre un endpoint" muestra un `accreta/.stratum/worklist/<uuid>.tasks`. [`worklist/concepts/bilink-tasks.md`](https://github.com/anibalanto/accreta/blob/1f06fd96b6052d00ac6319179845a810d0f05296/subsystems/worklist/concepts/bilink-tasks.md) inv. 3 dice explícitamente que ese archivo no existe. Gana `bilink-tasks.md`.
 
 ## Exclusiones deliberadas
 
@@ -50,7 +50,7 @@ No es urgente. Nada de lo que enumera está en el camino de los cuatro ADRs: es 
 
 Lattice pasó de 16 a 30 bilinks: ninguna de sus specs con implementación queda muda. `commands/daemon.md` cubre el crate del daemon —IPC, language servers, `symbol_at`, arranque—, `concepts/edge.md` y `concepts/provider.md` cubren el modelo y los tres proveedores, y `architecture.md`, `overview.md` e `integration/impact.md` tienen su ancla.
 
-`bilinker-lsp` tiene spec: [`commands/lsp.md`](../../subsystems/bilinker/commands/lsp.md), con cinco bilinks. Lo que documenta y lo que deja escrito que no hace —no corre `check`, no escribe, no ofrece acciones de código— salió de leer las 187 líneas del servidor.
+`bilinker-lsp` tiene spec: [`commands/lsp.md`](https://github.com/anibalanto/accreta/blob/1f06fd96b6052d00ac6319179845a810d0f05296/subsystems/bilinker/commands/lsp.md), con cinco bilinks. Lo que documenta y lo que deja escrito que no hace —no corre `check`, no escribe, no ofrece acciones de código— salió de leer las 187 líneas del servidor.
 
 `integration/worklist.md` ya no describe el `<uuid>.tasks` que nunca existió: remite a `bilink-tasks.md`, que es la fuente.
 

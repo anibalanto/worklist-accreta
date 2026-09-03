@@ -16,7 +16,7 @@ Como equipo de `hsi`, quiero declarar que un fragmento de mi API pública es un 
 
 ## Por qué es así
 
-[ADR-0005](../../subsystems/bilinker/.stratum/impl/docs/adr/0005-frontera-entre-proyectos.md) Decisión 1 (el endpoint `abstract`) y [ADR-0004](../../subsystems/bilinker/.stratum/impl/docs/adr/0004-bilinks-en-ref-paralela.md) (que es lo que hace que `main` no cambie).
+[ADR-0005](https://github.com/anibalanto/bilinker/blob/ac31d37732d421e14856b9db7db848c1ed74e8da/docs/adr/0005-frontera-entre-proyectos.md) Decisión 1 (el endpoint `abstract`) y [ADR-0004](https://github.com/anibalanto/bilinker/blob/ac31d37732d421e14856b9db7db848c1ed74e8da/docs/adr/0004-bilinks-en-ref-paralela.md) (que es lo que hace que `main` no cambie).
 
 ## Cuándo está hecha
 

@@ -40,7 +40,7 @@ bilinker accept --no-n1 .
           hash: 5bc80081…      ← el vecindario de hsi, opaco
 ```
 
-De esos hashes `retinar` no reconstruye path, query, texto ni commit — que es la propiedad que [`frontier.md`](../../subsystems/bilinker/concepts/frontier.md) promete. **Es la mitad que esta épica existe para entregar**, y es la primera vez que viaja.
+De esos hashes `retinar` no reconstruye path, query, texto ni commit — que es la propiedad que [`frontier.md`](https://github.com/anibalanto/accreta/blob/0a5026ccf343db23d5a8ab7e1f79d9d4f05ea6d8/subsystems/bilinker/concepts/frontier.md) promete. **Es la mitad que esta épica existe para entregar**, y es la primera vez que viaja.
 
 ### Y el drift se reportó
 

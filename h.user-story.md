@@ -8,7 +8,7 @@ parent: 1
 
 # El endpoint `abstract` y el endpoint repo funcionan entre dos repos
 
-**Lado:** desarrollo · **Decisión:** [ADR-0005](../../subsystems/bilinker/.stratum/impl/docs/adr/0005-frontera-entre-proyectos.md)
+**Lado:** desarrollo · **Decisión:** [ADR-0005](https://github.com/anibalanto/bilinker/blob/3746f77de9e94fc37391d69a548619a641d464e6/docs/adr/0005-frontera-entre-proyectos.md)
 
 Como quien desarrolla bilinker, quiero que un bilink cruce de un repo a otro —con una punta `abstract` de un lado y un endpoint repo del otro— y reporte drift, para tener la funcionalidad terminada y probada antes de que exista un proveedor real.
 
@@ -16,7 +16,7 @@ Como quien desarrolla bilinker, quiero que un bilink cruce de un repo a otro —
 
 ## Por qué es así
 
-No se repite acá. Vive en [0005-frontera-entre-proyectos.md](../../subsystems/bilinker/.stratum/impl/docs/adr/0005-frontera-entre-proyectos.md):
+No se repite acá. Vive en [0005-frontera-entre-proyectos.md](https://github.com/anibalanto/bilinker/blob/3746f77de9e94fc37391d69a548619a641d464e6/docs/adr/0005-frontera-entre-proyectos.md):
 
 - Decisión 1 — El endpoint `abstract`
 - Decisión 2 — El endpoint repo
